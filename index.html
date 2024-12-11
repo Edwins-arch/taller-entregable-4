@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Sitio Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <!-- Encabezados y párrafos -->
+    <header>
+        <h1>Bienvenidos a Mi Primer Sitio</h1>
+        <h2>Un poco sobre mí</h2>
+        <p>Hola, soy Edwin. Esta es mi primera página web creada como parte de un taller de desarrollo web. Aquí encontrarás información sobre mis hobbies, mi horario semanal y cómo contactarme.</p>
+    </header>
+
+    <!-- Imagen y enlaces -->
+    <section>
+        <h2>Acerca de mí</h2>
+        <div class="contenedor">
+            <img src="https://raw.githubusercontent.com/Edwins-arch/tarea-entregable-1-y-2/refs/heads/main/WhatsApp%20Image%202024-11-28%20at%206.14.02%20AM.jpeg" alt="Foto" class="margen" width="100">
+        </div>
+        <p>Encuéntrame en mis redes sociales:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/edwin.altamarquintero" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/itsnotewin/profilecard/?igsh=MWY4cnhmZ3N1OHp6Mg==" target="_blank">Instagram</a></li>
+            <li><a href="https://wa.me/qr/JK5BA5JFMJIOD1" target="_blank">WhatsApp</a></li>
+        </ul>
+    </section>
+
+    <!-- Listas -->
+    <section>
+        <h2>Mis Hobbies</h2>
+        <ul>
+            <li>Leer libros</li>
+            <li>Hacer senderismo</li>
+            <li>Escuchar música</li>
+        </ul>
+
+        <h2>Mis Tareas Prioritarias</h2>
+        <ol>
+            <li>Terminar este taller</li>
+            <li>Practicar HTML y CSS</li>
+            <li>Aprender JavaScript</li>
+        </ol>
+    </section>
+
+    <!-- Tabla -->
+    <section class>
+        <h2>Mi Horario Semanal</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Actividad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>Clases de programación</td>
+                </tr>
+                <tr>
+                    <td>Martes</td>
+                    <td>Práctica de deportes</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>Estudio personal</td>
+                </tr>
+                <tr>
+                    <td>Jueves</td>
+                    <td>Reunión con amigos</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>Película en casa</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section>
+        <h2>Contáctame</h2>
+        <form id="contact-form" class="container">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="reason">Motivo de contacto:</label>
+            <input type="text" id="reason" name="reason">
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const reason = document.getElementById('reason').value;
+            const email = document.getElementById('email').value;
+
+            if (name && reason && email) {
+                alert(`Gracias, ${name}! Hemos recibido tu mensaje sobre "${reason}". Pronto te contactaremos en ${email}.`);
+            } else {
+                alert('Por favor, completa todos los campos antes de enviar el formulario.');
+            }
+        });
+    </script>
+    </div>
+</body>
+</html>
